@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071318" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <title>PANINI WORLD CUP 2026 — Pack Opening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stadium" aria-hidden="true"><div class="stadium-lights"></div><div class="pitch-lines"></div><div class="crowd"></div></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Panini World Cup home"><span class="brand-mark">26</span><span class="brand-copy"><b>WORLD CUP</b><small>COLLECTOR'S CLUB</small></span></a>
+      <div class="top-center"><span class="live-dot"></span> SEZONUL COLECȚIONARULUI <span class="top-divider">/</span> <span id="topOwned">0</span> CARTONAȘE</div>
+      <div class="wallet"><span class="coin">L</span><span><small>SOLDUL TĂU</small><strong id="balance">50</strong></span><em>LEI</em></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Deschide meniul">☰</button>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="side-label">MECIUL TĂU</div>
+        <nav class="main-nav" aria-label="Navigare">
+          <button class="nav-item active" data-view="home"><span class="nav-icon">◈</span>Deschide pachet<span class="nav-arrow">↗</span></button>
+          <button class="nav-item" data-view="album"><span class="nav-icon">▤</span>Album<span class="nav-count" id="albumNavCount">0%</span></button>
+          <button class="nav-item" data-view="collection"><span class="nav-icon">▦</span>Colecție<span class="nav-count" id="collectionNavCount">0</span></button>
+          <button class="nav-item" data-view="shop"><span class="nav-icon">＋</span>Magazin</button>
+          <button class="nav-item" data-view="sell"><span class="nav-icon">⇧</span>Vinde duplicate<span class="nav-count" id="duplicateNavCount">0</span></button>
+          <button class="nav-item" data-view="mycards"><span class="nav-icon">▣</span>Cartonașele mele</button>
+        </nav>
+        <div class="side-bottom"><div class="event-card"><div class="event-icon">🏆</div><div><b>ROAD TO 2026</b><small>48 echipe · O colecție</small></div><span class="event-arrow">↗</span></div><div class="side-foot"><span class="online-dot"></span> PROGRES SALVAT AUTOMAT</div></div>
+      </aside>
+      <main class="main-content" id="mainContent">
+        <section class="view active" id="view-home"></section>
+        <section class="view" id="view-album"></section>
+        <section class="view" id="view-collection"></section>
+        <section class="view" id="view-shop"></section>
+        <section class="view" id="view-sell"></section>
+        <section class="view" id="view-mycards"></section>
+      </main>
+    </div>
+    <footer class="mobile-nav" id="mobileNav"></footer>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" id="modal"></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
