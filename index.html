@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#07131c" />
+  <title>PANINI WORLD CUP 2026 — Collector's World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="world"></canvas>
+    <div class="grain"></div>
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">26</div><div><b>PANINI</b><span>WORLD CUP <i>2026</i></span></div></div>
+      <div class="location"><span class="live-dot"></span><span id="location-name">MY COLLECTOR ROOM</span></div>
+      <div class="balance"><small>YOUR BALANCE</small><strong><span>₨</span><b id="money">50</b><em>LEI</em></strong></div>
+    </header>
+    <nav class="teleports" aria-label="World navigation">
+      <button class="nav-btn active" data-action="room"><span class="nav-icon">⌂</span><span>MY ROOM</span></button>
+      <button class="nav-btn" data-action="store"><span class="nav-icon">▤</span><span>STORE</span></button>
+      <button class="nav-btn" data-action="inventory"><span class="nav-icon">▣</span><span>INVENTORY</span><i id="inventory-count">0</i></button>
+      <button class="nav-btn" data-action="albums"><span class="nav-icon">▧</span><span>ALBUMS</span></button>
+    </nav>
+    <div class="left-note"><span class="keycap">WASD</span> MOVE <span class="note-sep">·</span><span class="keycap">MOUSE</span> LOOK <span class="note-sep">·</span><span class="keycap">E</span> INTERACT</div>
+    <div id="crosshair"><i></i><i></i></div>
+    <div id="interaction" class="interaction hidden"><span class="interact-key">E</span><span id="interaction-label">INTERACT</span></div>
+    <div id="toast" class="toast"></div>
+    <div id="modal-root"></div>
+    <div class="mobile-controls" id="mobile-controls">
+      <div class="joystick" id="joystick"><div class="joy-knob" id="joy-knob"></div></div>
+      <button class="look-hint" id="look-hint">DRAG TO LOOK</button>
+      <button class="mobile-use" id="mobile-use">USE</button>
+    </div>
+    <div class="help-pill">A living collection, one pack at a time <span>✦</span></div>
+    <footer><span>COLLECT. COMPLETE. CELEBRATE.</span><span id="save-status">SAVED LOCALLY</span></footer>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
